@@ -1,4 +1,5 @@
-import { getAccessToken } from 'zmp-sdk'
+import zmp from 'zmp-sdk'
+
 
 import { API_URL } from '@/constants/common'
 import { MerchantNotFoundError } from '@/constants/errors'
@@ -14,7 +15,8 @@ export async function request<T>(path: string, options?: RequestInit): Promise<T
     ...options,
     headers: API_URL
       ? {
-          Authorization: `Bearer ${await getAccessToken()}`,
+        Authorization: `Bearer ${await zmp.getAccessToken()}`,
+
           ...options?.headers,
         }
       : options?.headers,

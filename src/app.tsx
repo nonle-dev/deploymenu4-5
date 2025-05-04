@@ -20,7 +20,8 @@ const queryClient = new QueryClient({
 const MyApp = () => {
   return (
     <App>
-      <Suspense>
+      {/* Thêm fallback cho Suspense */}
+      <Suspense fallback={<div>Loading...</div>}>
         <QueryClientProvider client={queryClient}>
           <SnackbarProvider>
             <RootProvider>
@@ -39,4 +40,5 @@ const MyApp = () => {
     </App>
   )
 }
+
 export default MyApp
