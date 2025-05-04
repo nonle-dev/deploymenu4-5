@@ -6,7 +6,7 @@ import zaloMiniApp from 'zmp-vite-plugin'
 // https://vitejs.dev/config/
 export default () => {
   return defineConfig({
-    base: './',
+    base: '/',
     build: {
       outDir: 'www', // đổi từ 'dist' thành 'www'
     },
