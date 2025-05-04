@@ -21,7 +21,8 @@
     "deploy": "pnpm run build && zmp-cli deploy --existing",
     "deploy:live": "pnpm run build && zmp-cli deploy --existing --testing --desc",
     "lint": "eslint --ext .ts,.tsx src",
-    "fix": "eslint --ext .ts,.tsx src --fix"
+    "fix": "eslint --ext .ts,.tsx src --fix",
+    "preview": "vite preview"
   },
   "dependencies": {
     "@formatjs/intl-numberformat": "^8.10.0",
